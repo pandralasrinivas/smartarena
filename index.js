@@ -2,10 +2,10 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const db = require("./db"); // should export a pg Pool with .query
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const ExcelJS = require("exceljs");
+const { client, db } = require("./db");
 const multer = require("multer");
 
 const SECRET = process.env.JWT_SECRET || "your_super_secret_key";
