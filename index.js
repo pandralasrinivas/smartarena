@@ -2100,7 +2100,7 @@ async function start() {
   }
 
   app.listen(PORT, async () => {
-    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`🚀 Server running port ${PORT}`);
     try {
       const r = await db.query("SELECT now()");
       console.log("DB time:", r.rows[0].now);
